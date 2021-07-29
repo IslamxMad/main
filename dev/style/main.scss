@@ -39,6 +39,9 @@
                 justify-content: space-between;
                 .header__nav_item {
                     margin-left: 5px;
+                    
+
+                    
                     .header__nav_link {
                         text-align: center;
                         color: #fff;
@@ -49,15 +52,32 @@
                         font-size: 18px;
                         font-weight: 500;
                         padding: 20px;
-                        transition:all ease-in .3s;
-                        -webkit-transition:all ease-in .3s;
-                        -moz-transition:all ease-in .3s;
-                        -ms-transition:all ease-in .3s;
-                        -o-transition:all ease-in .3s;
+                        position: relative;
 
-                        &:hover {
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left:0;
+                            bottom: 0;
                             background-color: $gold;
+                            width: 0%;
+                            height: 2px;
+                            transition:all ease-in .2s;
+                            -webkit-transition:all ease-in .2s;
+                            -moz-transition:all ease-in .2s;
+                            -ms-transition:all ease-in .2s;
+                            -o-transition:all ease-in .2s;
                         }
+                        &:hover {
+                            &::after {
+                                width: 100%;
+                            }
+                        }
+                        
+
+                        // &:hover {
+                        //     background-color: $gold;
+                        // }
                     }
                 }
             }
@@ -176,11 +196,12 @@
                         -o-border-radius: 10px;
                         width: 100%;
                         height: 100%;
-                        min-width: 300px;
-                        min-height: 300px;
+                        // min-width: 300px;
+                        // min-height: 300px;
                         display: flex;
                         justify-content: center;
                         object-fit: cover;
+                        box-sizing:content-box;
 
                     }
                     .news__content_item_title {
@@ -368,7 +389,7 @@
                             height: 600px;
                             object-fit: cover;
                             overflow: hidden;
-
+                            
                         }
                     }
                 }

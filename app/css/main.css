@@ -1046,14 +1046,24 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   font-size: 18px;
   font-weight: 500;
   padding: 20px;
-  transition: all ease-in 0.3s;
-  -webkit-transition: all ease-in 0.3s;
-  -moz-transition: all ease-in 0.3s;
-  -ms-transition: all ease-in 0.3s;
-  -o-transition: all ease-in 0.3s;
+  position: relative;
 }
-.header .header__inner .header__nav .header__nav_list .header__nav_item .header__nav_link:hover {
+.header .header__inner .header__nav .header__nav_list .header__nav_item .header__nav_link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
   background-color: #a18f5b;
+  width: 0%;
+  height: 2px;
+  transition: all ease-in 0.2s;
+  -webkit-transition: all ease-in 0.2s;
+  -moz-transition: all ease-in 0.2s;
+  -ms-transition: all ease-in 0.2s;
+  -o-transition: all ease-in 0.2s;
+}
+.header .header__inner .header__nav .header__nav_list .header__nav_item .header__nav_link:hover::after {
+  width: 100%;
 }
 
 .no-webp .main .top {
@@ -1152,12 +1162,11 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   -o-border-radius: 10px;
   width: 100%;
   height: 100%;
-  min-width: 300px;
-  min-height: 300px;
   display: flex;
   justify-content: center;
   -o-object-fit: cover;
      object-fit: cover;
+  box-sizing: content-box;
 }
 .main .news .news__inner .news__content .news__content_item .news__content_item_title {
   margin-bottom: 10px;
@@ -1460,14 +1469,51 @@ body[data-aos-easing=ease-in-out-quart] [data-aos], [data-aos][data-aos][data-ao
   }
 }
 @media screen and (max-width: 1299px) {
+  .main .news .news__inner {
+    max-width: 80%;
+  }
   .main .news .news__inner .news__content {
-    justify-content: center;
+    justify-content: space-between;
   }
   .main .news .news__inner .news__content .news__content_item {
-    width: 50%;
+    max-width: 48%;
   }
-  .main .teachers .teachers__inner .teachers__content {
-    max-width: 90%;
+  .main .students .students__inner {
+    max-width: 80%;
+  }
+  .main .students .students__inner .students__content {
+    gap: 0em;
+    justify-content: space-between;
+  }
+  .main .students .students__inner .students__content .students__profile {
+    max-width: 19%;
+  }
+  .main .students .students__inner .students__content .students__profile .students__profile_img {
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+  }
+  .main .teachers .teachers__inner {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  .main .teachers .teachers__inner .teachers__content .teachers__content_slider .teachers__content_slide .teachers__content_slide_text {
+    width: 60%;
+    padding: 10px;
+  }
+  .main .teachers .teachers__inner .teachers__content .teachers__content_slider .teachers__content_slide picture {
+    width: 40%;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  .main .teachers .teachers__inner .teachers__content .teachers__content_slider .teachers__content_slide picture .teachers__content_slide_img {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 .webp .main .top { background-image: url(../img/top_bg.webp); }
