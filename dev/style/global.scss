@@ -1,0 +1,51 @@
+@import './vars.scss';
+@import './fonts.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.valid_hd {
+    display: none;
+}
+
+
+
+body {
+    background-color:rgb(233, 233, 233);
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+// JS classes
+
+.header-show {
+    background-color: rgba(0, 0, 0, .95) !important;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}

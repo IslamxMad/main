@@ -1,0 +1,28 @@
+// Desktops
+
+@media screen and (max-width: 1299px) {
+    .main {
+        .news {
+            .news__inner {
+                
+                .news__title {
+
+                }
+                .news__content {
+                    justify-content: center;
+                    .news__content_item {
+                        width: 50%;
+                    }
+                }
+            }
+        }
+
+        .teachers {
+            .teachers__inner {
+                .teachers__content {
+                    max-width: 90%;
+                }
+            }
+        }
+    }
+}
